@@ -23,4 +23,40 @@ const siswaArr = [
   },
 ];
 
-console.log(angkaArr);
+// length
+// console.log(angkaArr.length);
+// console.log(kataArr.length);
+// console.log(siswaArr.length);
+
+// pop
+// console.log(angkaArr);
+// const terakhir = angkaArr.pop();
+// console.log(terakhir);
+// console.log(angkaArr);
+// console.log(angkaArr.length);
+
+// console.log(kataArr);
+// const terakhir = kataArr.pop();
+// console.log(terakhir);
+// kataArr.pop();
+// console.log(kataArr);
+// console.log(kataArr.length);
+
+// console.log(siswaArr);
+// const terakhir = siswaArr.pop();
+// console.log(terakhir);
+// siswaArr.pop();
+// console.log(siswaArr);
+// console.log(siswaArr.length);
+
+// push
+// console.log(angkaArr);
+// angkaArr.push(7, 9);
+// console.log(angkaArr);
+// console.log(kataArr);
+// kataArr.push("pintar", "cerdas");
+// console.log(kataArr);
+console.log(siswaArr);
+const siswaBaru = { id: 8, nama: "Agus", nilai: 40 };
+siswaArr.push(siswaBaru, { id: 1, nama: "Dian", nilai: 100 });
+console.log(siswaArr);
