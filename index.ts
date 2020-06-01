@@ -23,40 +23,66 @@ const siswaArr = [
   },
 ];
 
-// length
-// console.log(angkaArr.length);
-// console.log(kataArr.length);
-// console.log(siswaArr.length);
+// foreach
+// angkaArr.forEach((value, index, arr) => {
+//   // console.log("nilai value", value);
+//   // console.log("nilai index", index);
+//   // console.log("nilai arr", arr);
+//   if (index + 1 < arr.length) {
+//     console.log(value + arr[index + 1]);
+//     console.log("--------");
+//   }
+// });
 
-// pop
-// console.log(angkaArr);
-// const terakhir = angkaArr.pop();
-// console.log(terakhir);
-// console.log(angkaArr);
-// console.log(angkaArr.length);
+// kataArr.forEach((data, i, arraynya) => {
+//   if (i + 1 < arraynya.length) {
+//     console.log(data + arraynya[i + 1]);
+//     console.log("--------");
+//   }
+// });
 
-// console.log(kataArr);
-// const terakhir = kataArr.pop();
-// console.log(terakhir);
-// kataArr.pop();
-// console.log(kataArr);
-// console.log(kataArr.length);
+// siswaArr.forEach((siswa, index, arr) => {
+//   // console.log(siswa);
+//   if (index + 1 < arr.length) {
+//     const nilaiRataRata = (siswa.nilai + arr[index + 1].nilai) / 2;
+//     console.log(
+//       "Rata-rata nilai ",
+//       siswa.nama + " dan " + siswaArr[index + 1].nama
+//     );
+//     console.log(nilaiRataRata);
+//   }
+// });
 
-// console.log(siswaArr);
-// const terakhir = siswaArr.pop();
-// console.log(terakhir);
-// siswaArr.pop();
-// console.log(siswaArr);
-// console.log(siswaArr.length);
-
-// push
+// map
+// const angkaBaruArr = angkaArr.map((value, index, arr) => {
+//   if (index + 1 < arr.length) {
+//     console.log(value + arr[index + 1]);
+//     console.log("--------");
+//     return value + arr[index + 1];
+//   }
+// });
 // console.log(angkaArr);
-// angkaArr.push(7, 9);
-// console.log(angkaArr);
+// console.log(angkaBaruArr);
+// const kataBaruArr = kataArr.map((value, index, arr) => {
+//   if (index + 1 < arr.length) {
+//     console.log(value + " " + arr[index + 1]);
+//     console.log("--------");
+//     return value + " " + arr[index + 1];
+//   }
+// });
 // console.log(kataArr);
-// kataArr.push("pintar", "cerdas");
-// console.log(kataArr);
+// console.log(kataBaruArr);
+const siswaBaruArr = siswaArr.map((value, index, arr) => {
+  if (index + 1 < arr.length) {
+    const nilaiRataRata = (value.nilai + arr[index + 1].nilai) / 2;
+    const siswaBaru = {
+      nama: value.nama + " " + arr[index + 1].nama,
+      nilaiRataRata,
+    };
+    // console.log(value + " " + arr[index + 1]);
+    // console.log("--------");
+    return siswaBaru;
+  }
+});
 console.log(siswaArr);
-const siswaBaru = { id: 8, nama: "Agus", nilai: 40 };
-siswaArr.push(siswaBaru, { id: 1, nama: "Dian", nilai: 100 });
-console.log(siswaArr);
+console.log(siswaBaruArr);
