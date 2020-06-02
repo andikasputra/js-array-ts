@@ -23,13 +23,16 @@ const siswaArr = [
   },
 ];
 
-// filter
-// membuat array baru dari sebuah array yang memenuhi kondisi tertentu
-const angkaBaru = angkaArr.filter((value) => value > 3);
-console.log(angkaBaru);
+// find
+// mencari data di dalam array yang memenuhi kondisi tertentu
+// tidak menghasilkan array baru
+// menghasilkan satu buah data dari array
 
-const kataBaru = kataArr.filter((value) => value.length > 4);
-console.log(kataBaru);
+const angkaGanjilPertama = angkaArr.find((angka) => angka % 2 === 1);
+console.log(angkaGanjilPertama);
 
-const siswaLulus = siswaArr.filter((siswa) => siswa.nilai > 70);
-console.log(siswaLulus);
+const kataPendek = kataArr.find((value) => value.length < 4);
+console.log(kataPendek);
+
+const siswaCerdas = siswaArr.find((siswa) => siswa.nilai >= 80);
+console.log(siswaCerdas);
