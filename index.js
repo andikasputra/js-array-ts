@@ -22,63 +22,11 @@ var siswaArr = [
         nilai: 54
     },
 ];
-// foreach
-// angkaArr.forEach((value, index, arr) => {
-//   // console.log("nilai value", value);
-//   // console.log("nilai index", index);
-//   // console.log("nilai arr", arr);
-//   if (index + 1 < arr.length) {
-//     console.log(value + arr[index + 1]);
-//     console.log("--------");
-//   }
-// });
-// kataArr.forEach((data, i, arraynya) => {
-//   if (i + 1 < arraynya.length) {
-//     console.log(data + arraynya[i + 1]);
-//     console.log("--------");
-//   }
-// });
-// siswaArr.forEach((siswa, index, arr) => {
-//   // console.log(siswa);
-//   if (index + 1 < arr.length) {
-//     const nilaiRataRata = (siswa.nilai + arr[index + 1].nilai) / 2;
-//     console.log(
-//       "Rata-rata nilai ",
-//       siswa.nama + " dan " + siswaArr[index + 1].nama
-//     );
-//     console.log(nilaiRataRata);
-//   }
-// });
-// map
-// const angkaBaruArr = angkaArr.map((value, index, arr) => {
-//   if (index + 1 < arr.length) {
-//     console.log(value + arr[index + 1]);
-//     console.log("--------");
-//     return value + arr[index + 1];
-//   }
-// });
-// console.log(angkaArr);
-// console.log(angkaBaruArr);
-// const kataBaruArr = kataArr.map((value, index, arr) => {
-//   if (index + 1 < arr.length) {
-//     console.log(value + " " + arr[index + 1]);
-//     console.log("--------");
-//     return value + " " + arr[index + 1];
-//   }
-// });
-// console.log(kataArr);
-// console.log(kataBaruArr);
-var siswaBaruArr = siswaArr.map(function (value, index, arr) {
-    if (index + 1 < arr.length) {
-        var nilaiRataRata = (value.nilai + arr[index + 1].nilai) / 2;
-        var siswaBaru = {
-            nama: value.nama + " " + arr[index + 1].nama,
-            nilaiRataRata: nilaiRataRata
-        };
-        // console.log(value + " " + arr[index + 1]);
-        // console.log("--------");
-        return siswaBaru;
-    }
-});
-console.log(siswaArr);
-console.log(siswaBaruArr);
+// filter
+// membuat array baru dari sebuah array yang memenuhi kondisi tertentu
+var angkaBaru = angkaArr.filter(function (value) { return value > 3; });
+console.log(angkaBaru);
+var kataBaru = kataArr.filter(function (value) { return value.length > 4; });
+console.log(kataBaru);
+var siswaLulus = siswaArr.filter(function (siswa) { return siswa.nilai > 70; });
+console.log(siswaLulus);

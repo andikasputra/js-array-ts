@@ -23,66 +23,13 @@ const siswaArr = [
   },
 ];
 
-// foreach
-// angkaArr.forEach((value, index, arr) => {
-//   // console.log("nilai value", value);
-//   // console.log("nilai index", index);
-//   // console.log("nilai arr", arr);
-//   if (index + 1 < arr.length) {
-//     console.log(value + arr[index + 1]);
-//     console.log("--------");
-//   }
-// });
+// filter
+// membuat array baru dari sebuah array yang memenuhi kondisi tertentu
+const angkaBaru = angkaArr.filter((value) => value > 3);
+console.log(angkaBaru);
 
-// kataArr.forEach((data, i, arraynya) => {
-//   if (i + 1 < arraynya.length) {
-//     console.log(data + arraynya[i + 1]);
-//     console.log("--------");
-//   }
-// });
+const kataBaru = kataArr.filter((value) => value.length > 4);
+console.log(kataBaru);
 
-// siswaArr.forEach((siswa, index, arr) => {
-//   // console.log(siswa);
-//   if (index + 1 < arr.length) {
-//     const nilaiRataRata = (siswa.nilai + arr[index + 1].nilai) / 2;
-//     console.log(
-//       "Rata-rata nilai ",
-//       siswa.nama + " dan " + siswaArr[index + 1].nama
-//     );
-//     console.log(nilaiRataRata);
-//   }
-// });
-
-// map
-// const angkaBaruArr = angkaArr.map((value, index, arr) => {
-//   if (index + 1 < arr.length) {
-//     console.log(value + arr[index + 1]);
-//     console.log("--------");
-//     return value + arr[index + 1];
-//   }
-// });
-// console.log(angkaArr);
-// console.log(angkaBaruArr);
-// const kataBaruArr = kataArr.map((value, index, arr) => {
-//   if (index + 1 < arr.length) {
-//     console.log(value + " " + arr[index + 1]);
-//     console.log("--------");
-//     return value + " " + arr[index + 1];
-//   }
-// });
-// console.log(kataArr);
-// console.log(kataBaruArr);
-const siswaBaruArr = siswaArr.map((value, index, arr) => {
-  if (index + 1 < arr.length) {
-    const nilaiRataRata = (value.nilai + arr[index + 1].nilai) / 2;
-    const siswaBaru = {
-      nama: value.nama + " " + arr[index + 1].nama,
-      nilaiRataRata,
-    };
-    // console.log(value + " " + arr[index + 1]);
-    // console.log("--------");
-    return siswaBaru;
-  }
-});
-console.log(siswaArr);
-console.log(siswaBaruArr);
+const siswaLulus = siswaArr.filter((siswa) => siswa.nilai > 70);
+console.log(siswaLulus);
