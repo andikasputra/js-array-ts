@@ -24,24 +24,24 @@ const siswaArr = [
 ];
 
 /**
- * .unshift()
+ * .reverse()
  *
- * menambahkan ke sebuah array di awal posisi
- * mengubah isi array yang di .unshift()
- * data yg di .unshift() bisa lebih dari satu
+ * membalik susunan / urutan data di dalam array
+ * mengubah isi array yang di .reverse()
+ * bisa dimasukkan ke dalam variabel baru
  */
 
-// console.log("array sebelum unshift", angkaArr);
-// angkaArr.unshift(1, 6, 9);
-// console.log("array setelah unshift", angkaArr);
+// console.log("sebelum reverse", angkaArr);
+// const terbalik = angkaArr.reverse();
+// console.log("setelah reverse", angkaArr);
+// console.log("terbalik", terbalik);
 
-// console.log("array sebelum unshift", kataArr);
-// kataArr.unshift("saya", "kamu");
-// console.log("array setelah unshift", kataArr);
+// console.log("sebelum reverse", kataArr);
+// const terbalik = kataArr.reverse();
+// console.log("setelah reverse", kataArr);
+// console.log("terbalik", terbalik);
 
-console.log("array sebelum unshift", siswaArr);
-siswaArr.unshift(
-  { id: 11, nama: "Ahmad", nilai: 99 },
-  { id: 12, nama: "Arman", nilai: 0 }
-);
-console.log("array setelah unshift", siswaArr);
+console.log("sebelum reverse", siswaArr);
+const terbalik = siswaArr.reverse();
+console.log("setelah reverse", siswaArr);
+console.log("terbalik", terbalik);
