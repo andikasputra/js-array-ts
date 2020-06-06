@@ -24,25 +24,24 @@ const siswaArr = [
 ];
 
 /**
- * .shift()
+ * .unshift()
  *
- * mengeluarkan data pertama dari sebuah array
- * mengubah isi array yang di .shift()
- * data yg di .shift() bisa dimasukkan ke dalam sebuah variabel
+ * menambahkan ke sebuah array di awal posisi
+ * mengubah isi array yang di .unshift()
+ * data yg di .unshift() bisa lebih dari satu
  */
 
-// console.log(angkaArr);
-// // angkaArr.shift();
-// const angkaPertama = angkaArr.shift();
-// console.log(angkaArr);
-// console.log("angka yg dishift", angkaPertama);
+// console.log("array sebelum unshift", angkaArr);
+// angkaArr.unshift(1, 6, 9);
+// console.log("array setelah unshift", angkaArr);
 
-// console.log("sebelum di shift", kataArr);
-// const kataPertama = kataArr.shift();
-// console.log("setelah di shift", kataArr);
-// console.log("kata yg dishift", kataPertama);
+// console.log("array sebelum unshift", kataArr);
+// kataArr.unshift("saya", "kamu");
+// console.log("array setelah unshift", kataArr);
 
-console.log("sebelum di shift", siswaArr);
-const siswaPertama = siswaArr.shift();
-console.log("setelah di shift", siswaArr);
-console.log("siswa yg dishift", siswaPertama);
+console.log("array sebelum unshift", siswaArr);
+siswaArr.unshift(
+  { id: 11, nama: "Ahmad", nilai: 99 },
+  { id: 12, nama: "Arman", nilai: 0 }
+);
+console.log("array setelah unshift", siswaArr);
