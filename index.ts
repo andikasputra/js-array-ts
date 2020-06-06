@@ -23,16 +23,26 @@ const siswaArr = [
   },
 ];
 
-// find
-// mencari data di dalam array yang memenuhi kondisi tertentu
-// tidak menghasilkan array baru
-// menghasilkan satu buah data dari array
+/**
+ * .shift()
+ *
+ * mengeluarkan data pertama dari sebuah array
+ * mengubah isi array yang di .shift()
+ * data yg di .shift() bisa dimasukkan ke dalam sebuah variabel
+ */
 
-const angkaGanjilPertama = angkaArr.find((angka) => angka % 2 === 1);
-console.log(angkaGanjilPertama);
+// console.log(angkaArr);
+// // angkaArr.shift();
+// const angkaPertama = angkaArr.shift();
+// console.log(angkaArr);
+// console.log("angka yg dishift", angkaPertama);
 
-const kataPendek = kataArr.find((value) => value.length < 4);
-console.log(kataPendek);
+// console.log("sebelum di shift", kataArr);
+// const kataPertama = kataArr.shift();
+// console.log("setelah di shift", kataArr);
+// console.log("kata yg dishift", kataPertama);
 
-const siswaCerdas = siswaArr.find((siswa) => siswa.nilai >= 80);
-console.log(siswaCerdas);
+console.log("sebelum di shift", siswaArr);
+const siswaPertama = siswaArr.shift();
+console.log("setelah di shift", siswaArr);
+console.log("siswa yg dishift", siswaPertama);
