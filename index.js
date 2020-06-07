@@ -23,21 +23,22 @@ const siswaArr = [
     },
 ];
 /**
- * .reverse()
+ * .some()
  *
- * membalik susunan / urutan data di dalam array
- * mengubah isi array yang di .reverse()
+ * mengecek apakah di dalam array ada data yang sesuai kondisi
+ * menghasilkan nilai true / false
+ * tidak mengubah isi array
  * bisa dimasukkan ke dalam variabel baru
  */
-// console.log("sebelum reverse", angkaArr);
-// const terbalik = angkaArr.reverse();
-// console.log("setelah reverse", angkaArr);
-// console.log("terbalik", terbalik);
-// console.log("sebelum reverse", kataArr);
-// const terbalik = kataArr.reverse();
-// console.log("setelah reverse", kataArr);
-// console.log("terbalik", terbalik);
-console.log("sebelum reverse", siswaArr);
-const terbalik = siswaArr.reverse();
-console.log("setelah reverse", siswaArr);
-console.log("terbalik", terbalik);
+// console.log("sebelum some", angkaArr);
+// const adakah = angkaArr.some((value, index, arr) => value > 5);
+// console.log(adakah);
+// console.log("setelah some", angkaArr);
+// console.log("sebelum some", kataArr);
+// const adakah = kataArr.some((value) => value.length > 5);
+// console.log(adakah);
+// console.log("setelah some", kataArr);
+console.log("sebelum some", siswaArr);
+const adakah = siswaArr.some((value) => value.nilai < 50);
+console.log(adakah);
+console.log("setelah some", siswaArr);
